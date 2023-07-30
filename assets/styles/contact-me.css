@@ -1,0 +1,39 @@
+#contact-me {
+  background-color: #152039;
+  height: 200px;
+  display: flex;
+  align-items: center;
+
+
+}
+
+#contact-me h1 {
+  font-size: 0;
+}
+
+#contact-me nav {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons li a {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.social-icons li a i {
+  color :white;
+  font-size: 3rem;
+}

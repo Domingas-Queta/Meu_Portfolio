@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    font-size: 62.5%;
+        /* Para fonte padrão ser de 10px e não de 16 essa 
+técnica ajuda não conversão de px para rem
+em vez de ficar a dividir por 16 voce divide por dez que é muito fácil achar o resultado
+*/
+    
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 5px; /* Largura da scrollbar */
+    height: 5px;
+  }
+  
+  /* Estilizando o thumb (a parte deslizante da scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #2581d1; /* Cor da thumb */
+    border-radius: 5px; /* Raio de borda da thumb */
+  }
+body{
+    background-color: whitesmoke;
+   color:black;
+}
+button,
+input {
+    border: 0;
+    background: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active a:visited {
+    color: inherit;
+}
+.banner {
+    background-color: #152039;
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    width: 100%;
+    /* Ocupa todo o espaço no eixo X */
+}
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+.py{
+    padding-top: 7.2rem;
+    min-height: 100vh;
+}
+.heading {
+    margin: 1.8rem 0;
+    font-size: 2.4rem; 
+    line-height: 3.2rem; 
+    font-weight: bold;
+    color: tomato; 
+}
+#contact-me button a{
+    color: white;
+}
+
+@media screen and (min-width:1200px) {
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        background-image: url(./../img/QWOP3406.PNG);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    } 
+    .heading {
+        font-size: 3.6rem; 
+        line-height: 4rem; 
+        font-weight: bold;
+        color: tomato; 
+    } 
+}

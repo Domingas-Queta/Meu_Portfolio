@@ -1,0 +1,109 @@
+#header, #header section,  #menu ul, #menu ,#header .logo{
+  display: flex;
+}
+#header, #header > section, #menu {
+  justify-content: space-between;
+  align-items: center;
+}
+#header {
+  background-color: white; 
+  position: sticky;
+  top: 0;
+  height: 7.2rem;
+  z-index: 100;
+}
+#menu ul {
+  flex-direction: column;
+  padding-top: 6rem;
+  align-items: center;
+  height: calc(100vh - 7.2rem);
+  width: 50vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 7.2rem;
+  left:-100%;
+  transition: left 0.5s ease-in-out;
+}
+#menu.active ul{
+  left:0;
+  transition: left 0.5s ease-in-out;
+} 
+#menu ul li {
+  padding: 1rem;
+}
+#menu ul li a{
+  color: white;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  border: 2px solid transparent;
+}
+#menu ul li a:hover {
+  border-bottom: 2px solid #2581d1;
+  color: tomato;
+  transition: border ease-in 0.5s, color ease-in 0.5s;
+}
+.hamburger{
+
+color: #2581d1;
+display: block;
+transition:  color ease-in 0.5s;
+}
+.hamburger:hover{
+  color: tomato;
+  
+}
+#header .logo{
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  color: #2581d1;
+  background: transparent;
+  border: 1px solid #2581d1 ;
+  border-radius: 50%;
+  display:flex;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#header .logo:hover{
+  background-color: #2581d1;
+  color: #fff;
+  transition: 0,5s ease-in;
+}
+#header button {
+  color: #2581d1;
+  background: transparent;
+  border: solid 1px #2581d1;
+  padding: 0.5rem;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  width: 150px;
+}
+#header button:hover{
+  background-color: #2581d1;
+  color: #fff;
+  transition: 0.5s ease-in;
+}
+#header li button a, #header li button:hover a {
+  border: none;
+  color:inherit;
+}
+@media screen and (min-width: 768px) {
+  #menu ul {
+    width: auto;
+    padding-top: 0rem;
+    background: transparent;
+    flex-direction: row; /* Voltar ao fluxo normal com direção de linha */
+    gap: 1rem;
+    position: static; /* Remover a posição absoluta */
+    top: auto; /* Remover o posicionamento no topo */
+    height: auto; /* Remover a altura fixa */
+  }
+  #menu ul li a{
+    color:#2581d1;
+  }
+  .hamburger{
+    display:none;
+    }
+}
